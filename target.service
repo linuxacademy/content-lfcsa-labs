@@ -1,0 +1,12 @@
+[Unit] 
+Description=Log when default target reached
+After=cloud-final.service 
+
+[Service] 
+Type=oneshot        
+RemainAfterExit=yes   
+ExecStart=/bin/echo "--->  Reached default.target"
+ExecStart=/sbin/ls -l /etc/systemd/system/default.target 
+
+[Install]  
+WantedBy=default.target 
