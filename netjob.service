@@ -1,0 +1,13 @@
+[Unit]
+Description=Customize network settings for an IP address and a static route.
+DefaultDependencies=yes
+After=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=="echo add the IP address here"
+ExecStart=="echo add the static route here"
+
+[Install]
+WantedBy=multi-user.target[Unit]
